@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: target_groups
+#
+#  id                :integer          not null, primary key
+#  name              :string
+#  external_id       :string
+#  parent_id         :integer
+#  secret_code       :string
+#  panel_provider_id :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
 require 'test_helper'
 
 class TargetGroupTest < ActiveSupport::TestCase

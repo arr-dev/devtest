@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: target_groups
+#
+#  id                :integer          not null, primary key
+#  name              :string
+#  external_id       :string
+#  parent_id         :integer
+#  secret_code       :string
+#  panel_provider_id :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined.  If you add columns to the
