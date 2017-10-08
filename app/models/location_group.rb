@@ -13,6 +13,7 @@
 class LocationGroup < ActiveRecord::Base
   belongs_to :country, inverse_of: :location_groups
   belongs_to :panel_provider, inverse_of: :location_groups
+  has_many :panel_provider_countries, through: :panel_provider, source: :countries
   has_and_belongs_to_many :locations
 
   validates :country, presence: true

@@ -3,9 +3,9 @@ ActiveRecord::Base.transaction do
   pp2 = PanelProvider.create!(code: "pp2")
   pp3 = PanelProvider.create!(code: "pp3")
 
-  pl = Country.create!(country_code: "PL", panel_provider: pp1)
-  gb = Country.create!(country_code: "GB", panel_provider: pp2)
-  rs = Country.create!(country_code: "RS", panel_provider: pp3)
+  pl = Country.create!(country_code: "pl", panel_provider: pp1)
+  gb = Country.create!(country_code: "gb", panel_provider: pp2)
+  rs = Country.create!(country_code: "rs", panel_provider: pp3)
 
   LocationGroup.create!(name: "Wales", country: gb, panel_provider: gb.panel_provider) do |group|
     group.locations.build %w(

@@ -13,12 +13,17 @@
 #
 
 class TargetGroup < ActiveRecord::Base
-  scope :root, -> { where(parent_id: nil) }
-
   belongs_to :panel_provider, inverse_of: :target_groups
   belongs_to :parent, class_name: "TargetGroup"
   has_many :children, foreign_key: :parent_id, class_name: "TargetGroup"
+  has_many :panel_provider_countries, through: :panel_provider, source: :countries
   has_and_belongs_to_many :countries
 
   validates :panel_provider, presence: true
+
+  scope :root, -> { where(parent_id: nil) }
+
+  def self.by_country_code(code)
+    joins(:panel_provider_countries).merge(Country.by_country_code(code))
+  end
 end
