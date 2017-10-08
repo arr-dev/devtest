@@ -3,9 +3,7 @@ module PricingType
   UndefinedType = Class.new(StandardError)
 
   def self.build(type:)
-    type = type.to_s
-
-    raise UndefinedType, type unless ALL.include?(type)
+    raise UndefinedType, type.inspect unless ALL.include?(type)
 
     PricingType.const_get(type.to_s.camelize)
   end
