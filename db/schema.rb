@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008122251) do
+ActiveRecord::Schema.define(version: 20171008143212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_keys", force: :cascade do |t|
+    t.string   "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "api_keys", ["created_at"], name: "index_api_keys_on_created_at", using: :btree
+  add_index "api_keys", ["token"], name: "index_api_keys_on_token", unique: true, using: :btree
 
   create_table "countries", force: :cascade do |t|
     t.string   "country_code"

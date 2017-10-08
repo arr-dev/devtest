@@ -1,4 +1,6 @@
 class Api::Private::EvaluateTargetsController < ApiController
+  before_action :authenticate
+
   def create
     evaluator = PriceEvaluator.new(create_params)
 
