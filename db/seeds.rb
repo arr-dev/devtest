@@ -1,7 +1,7 @@
 ActiveRecord::Base.transaction do
-  pp1 = PanelProvider.create!(code: "pp1")
-  pp2 = PanelProvider.create!(code: "pp2")
-  pp3 = PanelProvider.create!(code: "pp3")
+  pp1 = PanelProvider.create!(code: "pp1", pricing_logic: "array_elements")
+  pp2 = PanelProvider.create!(code: "pp2", pricing_logic: "html_nodes")
+  pp3 = PanelProvider.create!(code: "pp3", pricing_logic: "letter")
 
   pl = Country.create!(country_code: "pl", panel_provider: pp1)
   gb = Country.create!(country_code: "gb", panel_provider: pp2)
