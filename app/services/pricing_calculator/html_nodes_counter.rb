@@ -7,7 +7,7 @@ module PricingCalculator
     end
 
     def call
-      nodes.count
+      nodes.count { |el| el.element? }
     end
 
     private

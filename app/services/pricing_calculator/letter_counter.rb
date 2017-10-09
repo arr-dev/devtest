@@ -4,7 +4,7 @@ module PricingCalculator
   class LetterCounter
     def initialize(page:, letter:)
       @page = page
-      @letter = letter.chr
+      @letter = letter
     end
 
     def call
