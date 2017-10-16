@@ -1,5 +1,9 @@
 class Api::Private::LocationsController < ApiController
-  include LocationsActions
-
   before_action :authenticate
+
+  def show
+    @locations = Location.by_country_code(params[:country_code])
+
+    render @locations
+  end
 end

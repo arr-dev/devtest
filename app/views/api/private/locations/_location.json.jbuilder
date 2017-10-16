@@ -1,3 +1,1 @@
-json.partial! "api/public/locations/location", location: location
-
-json.extract! location, :secret_code, :external_id
+json.extract! location, :id, :name, :secret_code, :external_id, :created_at, :updated_at

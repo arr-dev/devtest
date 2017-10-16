@@ -1,3 +1,7 @@
 class Api::Public::LocationsController < ApiController
-  include LocationsActions
+  def show
+    @locations = Location.by_country_code(params[:country_code])
+
+    render @locations
+  end
 end
