@@ -1,4 +1,5 @@
 require "test_helper"
+require "pricing_calculator/array_elements_counter"
 
 class PricingCalculator::ArrayElementsCounterTest < ActiveSupport::TestCase
   test "it counts array elements in json document" do

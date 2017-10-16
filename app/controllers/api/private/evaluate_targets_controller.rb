@@ -1,3 +1,5 @@
+require "price_evaluator"
+
 class Api::Private::EvaluateTargetsController < ApiController
   before_action :authenticate
 

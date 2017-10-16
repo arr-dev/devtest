@@ -1,4 +1,5 @@
 require "downloader"
+require "pricing_calculator/array_elements_counter"
 
 module PricingType
   class ArrayElements

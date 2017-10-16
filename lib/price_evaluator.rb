@@ -1,3 +1,5 @@
+require "pricing_type"
+
 class PriceEvaluator
   include ActiveModel::Model
 

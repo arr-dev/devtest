@@ -1,4 +1,5 @@
 require "test_helper"
+require "pricing_calculator/letter_counter"
 
 class PricingCalculator::LetterCounterTest < ActiveSupport::TestCase
   test "it counts all letters in html document" do

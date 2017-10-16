@@ -1,4 +1,5 @@
 require "downloader"
+require "pricing_calculator/letter_counter"
 
 module PricingType
   class Letter

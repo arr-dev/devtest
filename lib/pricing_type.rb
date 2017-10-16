@@ -5,6 +5,8 @@ module PricingType
   def self.build(type:)
     raise UndefinedType, type.inspect unless ALL.include?(type)
 
+    require "pricing_type/#{type}"
+
     PricingType.const_get(type.to_s.camelize)
   end
 end

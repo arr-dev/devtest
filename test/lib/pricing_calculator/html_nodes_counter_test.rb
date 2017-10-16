@@ -1,4 +1,5 @@
 require "test_helper"
+require "pricing_calculator/html_nodes_counter"
 
 class PricingCalculator::HtmlNodesCounterTest < ActiveSupport::TestCase
   test "it counts all html nodes in html document" do

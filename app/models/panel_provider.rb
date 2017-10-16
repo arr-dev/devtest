@@ -9,6 +9,8 @@
 #  pricing_logic :string
 #
 
+require "pricing_type"
+
 class PanelProvider < ActiveRecord::Base
   has_many :countries, inverse_of: :panel_provider
   has_many :location_groups, inverse_of: :panel_provider
